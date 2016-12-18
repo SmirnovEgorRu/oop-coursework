@@ -17,7 +17,7 @@ namespace coursework {
             fields.Add(new str_table_field ("Фамилия"));
             fields.Add(new str_table_field ("Имя"));
             fields.Add(new str_table_field ("Отчество"));
-            fields.Add(new int_table_field ("Код группы"));
+            fields.Add(new key_table_field ("Код группы", table_group.instanse(), 0));
             fields.Add(new str_table_field ("Форма обучения"));
             fields.Add(new date_table_field("Дата рождения"));
             fields.Add(new str_table_field ("Адрес"));
@@ -52,12 +52,12 @@ namespace coursework {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
-            fields.Add(new int_table_field("Код студента"));
-            fields.Add(new int_table_field("Код предмета"));
+            fields.Add(new key_table_field("Код студента", table_student.instanse(), 0));
+            fields.Add(new key_table_field("Код предмета", table_subject.instanse(), 0));
             fields.Add(new str_table_field("Форма контроля"));
             fields.Add(new str_table_field("Оценка"));
             fields.Add(new date_table_field("Дата"));
-            fields.Add(new int_table_field("Код преподавателя"));
+            fields.Add(new key_table_field("Код преподавателя", table_teacher.instanse(), 0));
 
             for (int i = 0, n = arg.Count<string>(); i < n; ++i)
                 fields[i].set_value(arg[i]);
@@ -93,8 +93,8 @@ namespace coursework {
             fields.Add(new int_table_field("Код группы"));
             fields.Add(new str_table_field("Наименование группы"));
             fields.Add(new int_table_field("Курс"));
-            fields.Add(new int_table_field("Код специальности"));
-            fields.Add(new int_table_field("Код факультета"));
+            fields.Add(new key_table_field("Код специальности", table_specialty.instanse(), 0));
+            fields.Add(new key_table_field("Код факультета", table_faculty.instanse(), 0));
 
             for (int i = 0, n = arg.Count<string>(); i < n; ++i)
                 fields[i].set_value(arg[i]);
@@ -141,7 +141,7 @@ namespace coursework {
 
             List<table_field> fields = new List<table_field>();
 
-            fields.Add(new int_table_field("Код факультета"));
+            fields.Add(new key_table_field("Код факультета", table_faculty.instanse(), 0));
             fields.Add(new str_table_field("Наименование факультета"));
 
             for (int i = 0, n = arg.Count<string>(); i < n; ++i)

@@ -51,9 +51,8 @@ namespace coursework {
                         break;
                     }
 
-
                 if (primary_record != null) return primary_record[index].get_value();
-                else return "undef";
+                else return "%undef%";
             } 
             return primary_record[index].get_value();
         }
