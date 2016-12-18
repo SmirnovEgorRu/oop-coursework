@@ -9,15 +9,15 @@ namespace coursework {
     abstract class table_field {
         public string name { get; protected set; }
         public string type { get; protected set; }
-        //public string value { get; set; }
         protected string value;
 
         virtual public string get_value() { return value; }
+        virtual public string get_absolute_value() { return value; }
         virtual public void set_value(string new_value) { value = new_value; }
     }
 
     class str_table_field: table_field {
-        public str_table_field(string new_name ) { type = "str"; name = new_name; }
+        public str_table_field(string new_name) { type = "str"; name = new_name; }
     }
 
     class date_table_field : table_field {
@@ -42,7 +42,7 @@ namespace coursework {
         private table related_table;
         private table_record primary_record;
         private int index;
-        
+
         override public string get_value() {
             if (primary_record == null) {
                 foreach (table_record record in related_table)

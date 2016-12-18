@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="field_factory.cs" />
+    <Compile Include="file_contr.cs" />
+    <Compile Include="main_contr.cs" />
     <Compile Include="main_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +72,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="files\группа.csv" />
+    <None Include="files\деканат.csv" />
+    <None Include="files\парс-препод.csv" />
+    <None Include="files\предметы.csv" />
+    <None Include="files\специальность.csv" />
+    <None Include="files\студент.csv" />
+    <None Include="files\успеваемость.csv" />
+    <None Include="files\факультеты.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
