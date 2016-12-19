@@ -26,13 +26,13 @@ namespace coursework {
         }
 
         void student(DataGridView data_grid, table source_table) {
-            for (int i = 0, n_raw = data_grid.RowCount; i < n_raw; ++i) {
+            for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j) {
                     if (j == 4) {
-                        string key = table_group.instanse().find(Convert.ToString(data_grid[j, i].Value), 0);
+                        string key = table_group.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
                         if (key != "%undef%") arg[j] = key;
                         else error = true;
                     }
@@ -44,18 +44,18 @@ namespace coursework {
         }
 
         void group(DataGridView data_grid, table source_table) {
-            for (int i = 0, n_raw = data_grid.RowCount; i < n_raw; ++i) {
+            for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j) {
                     if (j == 3) {
-                        string key = table_specialty.instanse().find(Convert.ToString(data_grid[j, i].Value), 0);
+                        string key = table_specialty.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
                         if (key != "%undef%") arg[j] = key;
                         else error = true;
                     } 
                     else if (j == 4) {
-                        string key = table_faculty.instanse().find(Convert.ToString(data_grid[j, i].Value), 0);
+                        string key = table_faculty.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
                         if (key != "%undef%") arg[j] = key;
                         else error = true;
                     }
@@ -67,7 +67,7 @@ namespace coursework {
         }
 
         void subject(DataGridView data_grid, table source_table) {
-            for (int i = 0, n_raw = data_grid.RowCount; i < n_raw; ++i) {
+            for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j)
@@ -78,23 +78,23 @@ namespace coursework {
         }
 
         void academic_progress(DataGridView data_grid, table source_table) {
-            for (int i = 0, n_raw = data_grid.RowCount; i < n_raw; ++i) {
+            for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j) {
                     if (j == 0) {
-                        string key = table_student.instanse().find(Convert.ToString(data_grid[j, i].Value), 0);
+                        string key = table_student.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
                         if (key != "%undef%") arg[j] = key;
                         else error = true;
                     }
                     else if (j == 1) {
-                        string key = table_subject.instanse().find(Convert.ToString(data_grid[j, i].Value), 0);
+                        string key = table_subject.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
                         if (key != "%undef%") arg[j] = key;
                         else error = true;
                     }
                     else if (j == 5) {
-                        string key = table_teacher.instanse().find(Convert.ToString(data_grid[j, i].Value), 0);
+                        string key = table_teacher.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
                         if (key != "%undef%") arg[j] = key;
                         else error = true;
                     }
@@ -106,7 +106,7 @@ namespace coursework {
         }
 
         void teacher(DataGridView data_grid, table source_table) {
-            for (int i = 0, n_raw = data_grid.RowCount; i < n_raw; ++i) {
+            for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j)
@@ -117,13 +117,13 @@ namespace coursework {
         }
 
         void deanery(DataGridView data_grid, table source_table) {
-            for (int i = 0, n_raw = data_grid.RowCount; i < n_raw; ++i) {
+            for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j) {
                     if (j == 0) {
-                        string key = table_faculty.instanse().find(Convert.ToString(data_grid[j, i].Value), 0);
+                        string key = table_faculty.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
                         if (key != "%undef%") arg[j] = key;
                         else error = true;
                     } else arg[j] = Convert.ToString(data_grid[j, i].Value);
@@ -134,7 +134,7 @@ namespace coursework {
         }
 
         void specialty(DataGridView data_grid, table source_table) {
-            for (int i = 0, n_raw = data_grid.RowCount; i < n_raw; ++i) {
+            for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j)
@@ -145,7 +145,7 @@ namespace coursework {
         }
 
         void faculty(DataGridView data_grid, table source_table) {
-            for (int i = 0, n_raw = data_grid.RowCount; i < n_raw; ++i) {
+            for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j)

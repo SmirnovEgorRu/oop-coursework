@@ -76,10 +76,10 @@ namespace coursework {
         }
 
 
-        public string find(string search_value, int search_index) {
+        public string find(string search_value, int search_index, int return_index) {
             foreach (table_record record in records) {
                 if (record[search_index].get_value() == search_value) {
-                    return record[search_index].get_absolute_value();
+                    return record[return_index].get_absolute_value();
                 }
             }
 

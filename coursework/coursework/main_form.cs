@@ -74,5 +74,9 @@ namespace coursework {
         private void button2_Click(object sender, EventArgs e) {
             parser.parse(data_grid, current_table);
         }
+
+        private void button3_Click(object sender, EventArgs e) {
+            clear_data_grid();
+        }
     }
 }
