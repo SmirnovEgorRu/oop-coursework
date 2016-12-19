@@ -44,31 +44,31 @@ namespace coursework {
         private int index;
 
         override public string get_value() {
-            if (primary_record == null) {
-                related_table.Reset();
-                foreach (table_record record in related_table) {
-                    int x = Convert.ToInt32(record[0].get_absolute_value());
-                    if (Convert.ToInt32(value) == x) {   //TODO
-                        primary_record = record;
-                        break;
-                    }
+            related_table.Reset();
+            foreach (table_record record in related_table) {
+                int x = Convert.ToInt32(record[0].get_absolute_value());
+                if (Convert.ToInt32(value) == x) {   //TODO
+                    primary_record = record;
+                    break;
                 }
+            }
+            related_table.Reset();
 
-                if (primary_record != null) return primary_record[index].get_value();
-                else return "%undef%";
-            } 
-            return primary_record[index].get_value();
+            if (primary_record != null) return primary_record[index].get_value();
+            else return "%undef%";
         }
 
         override public void set_value(string new_value) {
             value = new_value;
 
+            related_table.Reset();
             foreach (table_record record in related_table) {
                 if (value == record[index].get_value()) {
                     primary_record = record;
                     break;
                 }
             }
+            related_table.Reset();
         }
 
         public key_table_field(string new_name, table new_table, int new_index) {
