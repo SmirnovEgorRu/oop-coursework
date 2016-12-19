@@ -65,11 +65,25 @@ namespace coursework {
             return clone;
         }
 
+        public string get_name() {
+            return name_table;
+        }
 
         protected table() {
             records = new List<table_record>();
             columns_name = new List<string>();
             index = -1;
+        }
+
+
+        public string find(string search_value, int search_index) {
+            foreach (table_record record in records) {
+                if (record[search_index].get_value() == search_value) {
+                    return record[search_index].get_absolute_value();
+                }
+            }
+
+            return "%undef%";
         }
 
     }

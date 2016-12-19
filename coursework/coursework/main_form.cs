@@ -11,17 +11,19 @@ using System.Windows.Forms;
 namespace coursework {
     public partial class main_form : Form {
         main_contr main_mngr;
-
+        parser_to_table parser;
+        table current_table;
 
         public main_form() {
             InitializeComponent();
             main_mngr = new main_contr();
+            parser = new parser_to_table();
         }
 
         private void display(table table_for_display) {
             List<string> columns_name =  table_for_display.get_columns();
-
-            foreach(string name in columns_name) {
+            current_table = table_for_display;
+            foreach (string name in columns_name) {
                 var column = new DataGridViewColumn();
                 column.HeaderText = name;
                 column.Width = (data_grid.Width-50) / columns_name.Count();
@@ -58,6 +60,7 @@ namespace coursework {
         }
 
         private void button1_Click(object sender, EventArgs e) {
+            clear_data_grid();
             display(table_student.instanse());
             //display(table_subject.instanse());
             //display(table_deanery.instanse());
@@ -68,6 +71,8 @@ namespace coursework {
             //display(table_teacher.instanse());
         }
 
-
+        private void button2_Click(object sender, EventArgs e) {
+            parser.parse(data_grid, current_table);
+        }
     }
 }

@@ -55,6 +55,7 @@
     <Compile Include="main_form.Designer.cs">
       <DependentUpon>main_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="parser_to_table.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="table_record.cs" />
