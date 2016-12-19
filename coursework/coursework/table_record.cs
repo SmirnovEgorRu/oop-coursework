@@ -46,7 +46,7 @@ namespace coursework {
 
         public table_record(List<table_field> new_fields) {
             fields = new_fields;
-            index = 0;
+            index = -1;
         }
     }
 }

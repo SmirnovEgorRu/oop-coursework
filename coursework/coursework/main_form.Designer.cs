@@ -23,20 +23,48 @@
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent() {
+            this.data_grid = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.data_grid)).BeginInit();
             this.SuspendLayout();
             // 
-            // Form1
+            // data_grid
+            // 
+            this.data_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_grid.Location = new System.Drawing.Point(27, 21);
+            this.data_grid.Name = "data_grid";
+            this.data_grid.Size = new System.Drawing.Size(975, 451);
+            this.data_grid.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1049, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 395);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(1136, 519);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.data_grid);
+            this.Name = "main_form";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.main_form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.data_grid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView data_grid;
+        private System.Windows.Forms.Button button1;
     }
 }
 

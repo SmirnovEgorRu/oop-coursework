@@ -13,7 +13,7 @@ namespace coursework {
             read("files/специальность.csv", table_specialty.instanse());
             read("files/факультеты.csv", table_faculty.instanse());
             read("files/деканат.csv", table_deanery.instanse());
-            read("files/группа.csv", table_student.instanse());
+            read("files/группа.csv", table_group.instanse());
             read("files/студент.csv", table_student.instanse());
             read("files/успеваемость.csv", table_academic_progress.instanse());
         }
@@ -23,7 +23,7 @@ namespace coursework {
             write("files/специальность.csv", table_specialty.instanse());
             write("files/факультеты.csv", table_faculty.instanse());
             write("files/деканат.csv", table_deanery.instanse());
-            write("files/группа.csv", table_student.instanse());
+            write("files/группа.csv", table_group.instanse());
             write("files/студент.csv", table_student.instanse());
             write("files/успеваемость.csv", table_academic_progress.instanse());
         }

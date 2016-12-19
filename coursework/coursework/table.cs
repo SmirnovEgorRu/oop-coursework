@@ -56,10 +56,20 @@ namespace coursework {
             records.Clear();
         }
 
+        public List<string> get_columns() {
+            List<string> clone = new List<string>();
+
+            foreach (string str in columns_name)
+                clone.Add(str);
+
+            return clone;
+        }
+
 
         protected table() {
             records = new List<table_record>();
             columns_name = new List<string>();
+            index = -1;
         }
 
     }
@@ -79,10 +89,12 @@ namespace coursework {
             factory = new student_factory();
             name_table = "Студент";
 
-            columns_name.Add("Код преподавателя");
+            columns_name.Add("Код студента");
             columns_name.Add("Фамилия");
             columns_name.Add("Имя");
             columns_name.Add("Отчество");
+            columns_name.Add("Код группы");
+            columns_name.Add("Форма обучения");
             columns_name.Add("Дата рождения");
             columns_name.Add("Адрес");
             columns_name.Add("Телефон");

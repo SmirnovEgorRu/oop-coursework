@@ -45,11 +45,14 @@ namespace coursework {
 
         override public string get_value() {
             if (primary_record == null) {
-                foreach (table_record record in related_table)
-                    if (value == record[index].get_value()) {
+                related_table.Reset();
+                foreach (table_record record in related_table) {
+                    int x = Convert.ToInt32(record[0].get_absolute_value());
+                    if (Convert.ToInt32(value) == x) {   //TODO
                         primary_record = record;
                         break;
                     }
+                }
 
                 if (primary_record != null) return primary_record[index].get_value();
                 else return "%undef%";
@@ -60,11 +63,12 @@ namespace coursework {
         override public void set_value(string new_value) {
             value = new_value;
 
-            foreach (table_record record in related_table)
+            foreach (table_record record in related_table) {
                 if (value == record[index].get_value()) {
                     primary_record = record;
                     break;
                 }
+            }
         }
 
         public key_table_field(string new_name, table new_table, int new_index) {
