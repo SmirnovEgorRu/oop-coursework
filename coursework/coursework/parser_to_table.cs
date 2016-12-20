@@ -83,21 +83,21 @@ namespace coursework {
                 string[] arg = new string[data_grid.ColumnCount];
 
                 for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j) {
-                    if (j == 0) {
-                        string key = table_student.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
-                        if (key != "%undef%") arg[j] = key;
-                        else error = true;
-                    }
-                    else if (j == 1) {
+                    //if (j == 0) {
+                    //    string key = table_student.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
+                    //    if (key != "%undef%") arg[j] = key;
+                    //    else error = true;
+                    //}
+                     if (j == 1) {
                         string key = table_subject.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
                         if (key != "%undef%") arg[j] = key;
                         else error = true;
                     }
-                    else if (j == 5) {
-                        string key = table_teacher.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
-                        if (key != "%undef%") arg[j] = key;
-                        else error = true;
-                    }
+                    //else if (j == 5) {
+                    //    string key = table_teacher.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
+                    //    if (key != "%undef%") arg[j] = key;
+                    //    else error = true;
+                    //}
                     else arg[j] = Convert.ToString(data_grid[j, i].Value);
                 }
 

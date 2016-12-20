@@ -50,6 +50,11 @@
             this.запросНаОтличниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.label_for_student = new System.Windows.Forms.Label();
+            this.rating_view = new System.Windows.Forms.Button();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.студентыПоГруппамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.студентыПоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.data_grid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,17 +62,17 @@
             // data_grid
             // 
             this.data_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_grid.Location = new System.Drawing.Point(26, 43);
+            this.data_grid.Location = new System.Drawing.Point(26, 72);
             this.data_grid.Name = "data_grid";
-            this.data_grid.Size = new System.Drawing.Size(1017, 451);
+            this.data_grid.Size = new System.Drawing.Size(1017, 422);
             this.data_grid.TabIndex = 0;
             this.data_grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_grid_CellContentClick);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1068, 43);
+            this.button2.Location = new System.Drawing.Point(1071, 43);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(92, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "сохранить";
             this.button2.UseVisualStyleBackColor = true;
@@ -75,9 +80,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1068, 72);
+            this.button3.Location = new System.Drawing.Point(1071, 72);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(92, 23);
             this.button3.TabIndex = 3;
             this.button3.Text = "очистить";
             this.button3.UseVisualStyleBackColor = true;
@@ -89,10 +94,11 @@
             this.файлToolStripMenuItem,
             this.таблицыToolStripMenuItem,
             this.запросыToolStripMenuItem,
+            this.отчетыToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1155, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1175, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -232,7 +238,7 @@
             // 
             this.запросНаНесдавшихToolStripMenuItem.Name = "запросНаНесдавшихToolStripMenuItem";
             this.запросНаНесдавшихToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            this.запросНаНесдавшихToolStripMenuItem.Text = "Запрос на несдавших студентов";
+            this.запросНаНесдавшихToolStripMenuItem.Text = "Запрос на студентов несдавших сессию";
             this.запросНаНесдавшихToolStripMenuItem.Click += new System.EventHandler(this.запросНаНесдавшихToolStripMenuItem_Click);
             // 
             // запросНаСтудентовСТройкамиToolStripMenuItem
@@ -271,19 +277,64 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1068, 101);
+            this.button1.Location = new System.Drawing.Point(1071, 267);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "удалить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // label_for_student
+            // 
+            this.label_for_student.AutoSize = true;
+            this.label_for_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_for_student.Location = new System.Drawing.Point(26, 28);
+            this.label_for_student.Name = "label_for_student";
+            this.label_for_student.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_for_student.Size = new System.Drawing.Size(0, 20);
+            this.label_for_student.TabIndex = 6;
+            // 
+            // rating_view
+            // 
+            this.rating_view.Location = new System.Drawing.Point(1069, 160);
+            this.rating_view.Name = "rating_view";
+            this.rating_view.Size = new System.Drawing.Size(94, 23);
+            this.rating_view.TabIndex = 7;
+            this.rating_view.Text = "успеваемость";
+            this.rating_view.UseVisualStyleBackColor = true;
+            this.rating_view.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.студентыПоГруппамToolStripMenuItem,
+            this.студентыПоToolStripMenuItem});
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            // 
+            // студентыПоГруппамToolStripMenuItem
+            // 
+            this.студентыПоГруппамToolStripMenuItem.Name = "студентыПоГруппамToolStripMenuItem";
+            this.студентыПоГруппамToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.студентыПоГруппамToolStripMenuItem.Text = "Студенты по группам";
+            this.студентыПоГруппамToolStripMenuItem.Click += new System.EventHandler(this.студентыПоГруппамToolStripMenuItem_Click);
+            // 
+            // студентыПоToolStripMenuItem
+            // 
+            this.студентыПоToolStripMenuItem.Name = "студентыПоToolStripMenuItem";
+            this.студентыПоToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.студентыПоToolStripMenuItem.Text = "Студенты с успеваемостью";
+            this.студентыПоToolStripMenuItem.Click += new System.EventHandler(this.студентыПоToolStripMenuItem_Click);
+            // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 519);
+            this.ClientSize = new System.Drawing.Size(1175, 519);
+            this.Controls.Add(this.rating_view);
+            this.Controls.Add(this.label_for_student);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -330,6 +381,11 @@
         private System.Windows.Forms.ToolStripMenuItem запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem запросНаОтличниковToolStripMenuItem;
+        private System.Windows.Forms.Label label_for_student;
+        private System.Windows.Forms.Button rating_view;
+        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem студентыПоГруппамToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem студентыПоToolStripMenuItem;
     }
 }
 

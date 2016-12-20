@@ -24,6 +24,11 @@ namespace coursework {
             return cur_request.execute(value);
         }
 
+        public table find_by_rating(string value) {
+            cur_request = new rating_request();
+            return cur_request.execute(value);
+        }
+
         public table find_by_rating_2() {
             cur_request = new _2_request();
             return cur_request.execute();

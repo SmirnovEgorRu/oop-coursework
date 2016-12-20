@@ -24,6 +24,12 @@ namespace coursework {
 
         private void display(table table_for_display) {
             clear_data_grid();
+
+            if (table_for_display.get_name() == "Студент") rating_view.Enabled = true;
+            else rating_view.Enabled = false;
+
+            if (table_for_display.get_name() != "Запрос успеваемости") label_for_student.Text = "";
+
             List<string> columns_name =  table_for_display.get_columns();
             current_table = table_for_display;
             int column_width = (data_grid.Width-70) / columns_name.Count();
@@ -65,6 +71,7 @@ namespace coursework {
 
         private void main_form_Load(object sender, EventArgs e) {
             data_grid.ColumnHeaderMouseClick += data_grid_ColumnHeaderMouseClick;
+            rating_view.Enabled = false;
         }
 
         private void data_grid_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
@@ -193,6 +200,33 @@ namespace coursework {
         private void запросНаОтличниковToolStripMenuItem_Click(object sender, EventArgs e) {
             table result = request_mngr.find_by_rating_5();
             display(result);
+        }
+
+        private void button4_Click(object sender, EventArgs e) {
+            label_for_student.Text = "";
+            if (data_grid.SelectedRows.Count > 0 && current_table !=null) {
+                if (current_table.get_name() == "Студент") {
+
+                    int index = data_grid.SelectedRows[0].Index;
+
+                    label_for_student.Text = Convert.ToString(data_grid[1, index].Value) + " ";
+                    label_for_student.Text += Convert.ToString(data_grid[2, index].Value) + " ";
+                    label_for_student.Text += Convert.ToString(data_grid[3, index].Value) + " ";
+                    label_for_student.Text += Convert.ToString(data_grid[4, index].Value);
+
+                    string str = Convert.ToString(data_grid[0, index].Value);
+                    table result = request_mngr.find_by_rating(str);
+                    display(result);
+                }
+            }
+        }
+
+        private void студентыПоToolStripMenuItem_Click(object sender, EventArgs e) {
+
+        }
+
+        private void студентыПоГруппамToolStripMenuItem_Click(object sender, EventArgs e) {
+
         }
     }
 }

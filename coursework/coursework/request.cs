@@ -104,6 +104,16 @@ namespace coursework {
         }
     }
 
+    class rating_request : request_by_value {
+        public override table execute(object value) {
+            List<string> columns = table_academic_progress.instanse().get_columns();
+            result = new table_custom("Запрос успеваемости", columns);
+
+            find(table_academic_progress.instanse(), 0, Convert.ToString(value));
+
+            return result;
+        }
+    }
 
     // ---------------------------
     abstract class request_by_rating : request {
@@ -188,7 +198,8 @@ namespace coursework {
 
         protected override bool add_check(bool _2, bool _3, bool _4, bool _5) {
             if (_2 || _3 || _5) return false;
-            return true;
+            else if (_4) return true;
+            return false;
         }
     }
 
@@ -221,7 +232,8 @@ namespace coursework {
 
         protected override bool add_check(bool _2, bool _3, bool _4, bool _5) {
             if (_2 || _3 || _4) return false;
-            return true;
+            else if (_5) return true;
+            return false;
         }
     }
 }

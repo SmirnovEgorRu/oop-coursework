@@ -52,12 +52,17 @@ namespace coursework {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
-            fields.Add(new key_table_field("Код студента", table_student.instanse(), 1));
+            //fields.Add(new key_table_field("Код студента", table_student.instanse(), 1));
+            fields.Add(new str_table_field("Код студента"));
             fields.Add(new key_table_field("Код предмета", table_subject.instanse(), 1));
+            //fields.Add(new str_table_field("Код предмета"));
+
             fields.Add(new str_table_field("Форма контроля"));
             fields.Add(new str_table_field("Оценка"));
             fields.Add(new date_table_field("Дата"));
-            fields.Add(new key_table_field("Код преподавателя", table_teacher.instanse(), 1));
+
+            //fields.Add(new key_table_field("Код преподавателя", table_teacher.instanse(), 1));
+            fields.Add(new str_table_field("Код преподавателя"));
 
             for (int i = 0, n = arg.Count<string>(); i < n; ++i)
                 fields[i].set_value(arg[i]);
