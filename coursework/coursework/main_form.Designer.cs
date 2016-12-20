@@ -42,9 +42,14 @@
             this.запросыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаСпециальностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросНаФакультетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
-            this.запросНаФакультетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросНаНесдавшихToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросНаСтудентовСТройкамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросНаОтличниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.data_grid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -192,7 +197,12 @@
             this.запросыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.запросНаГруппуToolStripMenuItem,
             this.запросНаСпециальностьToolStripMenuItem,
-            this.запросНаФакультетToolStripMenuItem});
+            this.запросНаФакультетToolStripMenuItem,
+            this.запросНаНесдавшихToolStripMenuItem,
+            this.запросНаСтудентовСТройкамиToolStripMenuItem,
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem,
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem,
+            this.запросНаОтличниковToolStripMenuItem});
             this.запросыToolStripMenuItem.Name = "запросыToolStripMenuItem";
             this.запросыToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.запросыToolStripMenuItem.Text = "Запросы";
@@ -211,6 +221,13 @@
             this.запросНаСпециальностьToolStripMenuItem.Text = "Запрос на специальность";
             this.запросНаСпециальностьToolStripMenuItem.Click += new System.EventHandler(this.запросНаСпециальностьToolStripMenuItem_Click);
             // 
+            // запросНаФакультетToolStripMenuItem
+            // 
+            this.запросНаФакультетToolStripMenuItem.Name = "запросНаФакультетToolStripMenuItem";
+            this.запросНаФакультетToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.запросНаФакультетToolStripMenuItem.Text = "Запрос на факультет";
+            this.запросНаФакультетToolStripMenuItem.Click += new System.EventHandler(this.запросНаФакультетToolStripMenuItem_Click);
+            // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
@@ -227,12 +244,36 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // запросНаФакультетToolStripMenuItem
+            // запросНаНесдавшихToolStripMenuItem
             // 
-            this.запросНаФакультетToolStripMenuItem.Name = "запросНаФакультетToolStripMenuItem";
-            this.запросНаФакультетToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.запросНаФакультетToolStripMenuItem.Text = "Запрос на факультет";
-            this.запросНаФакультетToolStripMenuItem.Click += new System.EventHandler(this.запросНаФакультетToolStripMenuItem_Click);
+            this.запросНаНесдавшихToolStripMenuItem.Name = "запросНаНесдавшихToolStripMenuItem";
+            this.запросНаНесдавшихToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.запросНаНесдавшихToolStripMenuItem.Text = "Запрос на несдавших студентов";
+            this.запросНаНесдавшихToolStripMenuItem.Click += new System.EventHandler(this.запросНаНесдавшихToolStripMenuItem_Click);
+            // 
+            // запросНаСтудентовСТройкамиToolStripMenuItem
+            // 
+            this.запросНаСтудентовСТройкамиToolStripMenuItem.Name = "запросНаСтудентовСТройкамиToolStripMenuItem";
+            this.запросНаСтудентовСТройкамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаСтудентовСТройкамиToolStripMenuItem.Text = "Запрос на студентов с тройками";
+            // 
+            // запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem
+            // 
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Name = "запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem";
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Text = "Запрос на студентов с одними четверками";
+            // 
+            // запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem
+            // 
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Name = "запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem";
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Text = "Запрос на студентов с четверками и пятерками";
+            // 
+            // запросНаОтличниковToolStripMenuItem
+            // 
+            this.запросНаОтличниковToolStripMenuItem.Name = "запросНаОтличниковToolStripMenuItem";
+            this.запросНаОтличниковToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаОтличниковToolStripMenuItem.Text = "Запрос на студентов с одними пятерками";
             // 
             // main_form
             // 
@@ -280,6 +321,11 @@
         private System.Windows.Forms.ToolStripMenuItem запросНаГруппуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem запросНаСпециальностьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem запросНаФакультетToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запросНаНесдавшихToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запросНаСтудентовСТройкамиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запросНаОтличниковToolStripMenuItem;
     }
 }
 

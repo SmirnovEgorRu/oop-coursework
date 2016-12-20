@@ -170,5 +170,9 @@ namespace coursework {
             }
         }
 
+        private void запросНаНесдавшихToolStripMenuItem_Click(object sender, EventArgs e) {
+            table result = request_mngr.find(group, "Группа");
+            display(result);
+        }
     }
 }
