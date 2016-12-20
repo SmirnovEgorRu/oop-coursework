@@ -149,7 +149,7 @@ namespace coursework {
         private void callback_group(string group) {
             this.Enabled = true;
             if (group != "%error%") {
-                table result = request_mngr.find(group, "Группа");
+                table result = request_mngr.find_by_group(group);
                 display(result);
             }
         }
@@ -157,7 +157,7 @@ namespace coursework {
         private void callback_faculty(string faculty) {
             this.Enabled = true;
             if (faculty != "%error%") {
-                table result = request_mngr.find(faculty, "Факультет");
+                table result = request_mngr.find_by_faculty(faculty);
                 display(result);
             }
         }
@@ -165,13 +165,33 @@ namespace coursework {
         private void callback_specialty(string specialty) {
             this.Enabled = true;
             if (specialty != "%error%") {
-                table result = request_mngr.find(specialty, "Специальность");
+                table result = request_mngr.find_by_specialty(specialty);
                 display(result);
             }
         }
 
         private void запросНаНесдавшихToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = request_mngr.find(group, "Группа");
+            table result = request_mngr.find_by_rating_2();
+            display(result);
+        }
+
+        private void запросНаСтудентовСТройкамиToolStripMenuItem_Click(object sender, EventArgs e) {
+            table result = request_mngr.find_by_rating_3();
+            display(result);
+        }
+
+        private void запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem_Click(object sender, EventArgs e) {
+            table result = request_mngr.find_by_rating_4();
+            display(result);
+        }
+
+        private void запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem_Click(object sender, EventArgs e) {
+            table result = request_mngr.find_by_rating_4_and_5();
+            display(result);
+        }
+
+        private void запросНаОтличниковToolStripMenuItem_Click(object sender, EventArgs e) {
+            table result = request_mngr.find_by_rating_5();
             display(result);
         }
     }

@@ -43,13 +43,13 @@
             this.запросНаГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаСпециальностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаФакультетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.запросНаНесдавшихToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаСтудентовСТройкамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаОтличниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_grid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -210,23 +210,58 @@
             // запросНаГруппуToolStripMenuItem
             // 
             this.запросНаГруппуToolStripMenuItem.Name = "запросНаГруппуToolStripMenuItem";
-            this.запросНаГруппуToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.запросНаГруппуToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
             this.запросНаГруппуToolStripMenuItem.Text = "Запрос на группу";
             this.запросНаГруппуToolStripMenuItem.Click += new System.EventHandler(this.запросНаГруппуToolStripMenuItem_Click);
             // 
             // запросНаСпециальностьToolStripMenuItem
             // 
             this.запросНаСпециальностьToolStripMenuItem.Name = "запросНаСпециальностьToolStripMenuItem";
-            this.запросНаСпециальностьToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.запросНаСпециальностьToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
             this.запросНаСпециальностьToolStripMenuItem.Text = "Запрос на специальность";
             this.запросНаСпециальностьToolStripMenuItem.Click += new System.EventHandler(this.запросНаСпециальностьToolStripMenuItem_Click);
             // 
             // запросНаФакультетToolStripMenuItem
             // 
             this.запросНаФакультетToolStripMenuItem.Name = "запросНаФакультетToolStripMenuItem";
-            this.запросНаФакультетToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.запросНаФакультетToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
             this.запросНаФакультетToolStripMenuItem.Text = "Запрос на факультет";
             this.запросНаФакультетToolStripMenuItem.Click += new System.EventHandler(this.запросНаФакультетToolStripMenuItem_Click);
+            // 
+            // запросНаНесдавшихToolStripMenuItem
+            // 
+            this.запросНаНесдавшихToolStripMenuItem.Name = "запросНаНесдавшихToolStripMenuItem";
+            this.запросНаНесдавшихToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаНесдавшихToolStripMenuItem.Text = "Запрос на несдавших студентов";
+            this.запросНаНесдавшихToolStripMenuItem.Click += new System.EventHandler(this.запросНаНесдавшихToolStripMenuItem_Click);
+            // 
+            // запросНаСтудентовСТройкамиToolStripMenuItem
+            // 
+            this.запросНаСтудентовСТройкамиToolStripMenuItem.Name = "запросНаСтудентовСТройкамиToolStripMenuItem";
+            this.запросНаСтудентовСТройкамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаСтудентовСТройкамиToolStripMenuItem.Text = "Запрос на студентов с тройками";
+            this.запросНаСтудентовСТройкамиToolStripMenuItem.Click += new System.EventHandler(this.запросНаСтудентовСТройкамиToolStripMenuItem_Click);
+            // 
+            // запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem
+            // 
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Name = "запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem";
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Text = "Запрос на студентов с одними четверками";
+            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Click += new System.EventHandler(this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem_Click);
+            // 
+            // запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem
+            // 
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Name = "запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem";
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Text = "Запрос на студентов с четверками и пятерками";
+            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Click += new System.EventHandler(this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem_Click);
+            // 
+            // запросНаОтличниковToolStripMenuItem
+            // 
+            this.запросНаОтличниковToolStripMenuItem.Name = "запросНаОтличниковToolStripMenuItem";
+            this.запросНаОтличниковToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
+            this.запросНаОтличниковToolStripMenuItem.Text = "Запрос на студентов с одними пятерками";
+            this.запросНаОтличниковToolStripMenuItem.Click += new System.EventHandler(this.запросНаОтличниковToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -243,37 +278,6 @@
             this.button1.Text = "удалить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // запросНаНесдавшихToolStripMenuItem
-            // 
-            this.запросНаНесдавшихToolStripMenuItem.Name = "запросНаНесдавшихToolStripMenuItem";
-            this.запросНаНесдавшихToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
-            this.запросНаНесдавшихToolStripMenuItem.Text = "Запрос на несдавших студентов";
-            this.запросНаНесдавшихToolStripMenuItem.Click += new System.EventHandler(this.запросНаНесдавшихToolStripMenuItem_Click);
-            // 
-            // запросНаСтудентовСТройкамиToolStripMenuItem
-            // 
-            this.запросНаСтудентовСТройкамиToolStripMenuItem.Name = "запросНаСтудентовСТройкамиToolStripMenuItem";
-            this.запросНаСтудентовСТройкамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            this.запросНаСтудентовСТройкамиToolStripMenuItem.Text = "Запрос на студентов с тройками";
-            // 
-            // запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem
-            // 
-            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Name = "запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem";
-            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem.Text = "Запрос на студентов с одними четверками";
-            // 
-            // запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem
-            // 
-            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Name = "запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem";
-            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem.Text = "Запрос на студентов с четверками и пятерками";
-            // 
-            // запросНаОтличниковToolStripMenuItem
-            // 
-            this.запросНаОтличниковToolStripMenuItem.Name = "запросНаОтличниковToolStripMenuItem";
-            this.запросНаОтличниковToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            this.запросНаОтличниковToolStripMenuItem.Text = "Запрос на студентов с одними пятерками";
             // 
             // main_form
             // 
