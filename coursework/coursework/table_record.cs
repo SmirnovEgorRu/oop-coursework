@@ -44,6 +44,15 @@ namespace coursework {
             return fields.Count;
         }
 
+        public string[] get_values() {
+            string[] arg = new string[size()];
+
+            for (int i = 0; i < size(); ++i)
+                arg[i] = fields[i].get_value();
+
+            return arg;
+        }
+
         public table_record(List<table_field> new_fields) {
             fields = new_fields;
             index = -1;

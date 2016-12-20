@@ -39,8 +39,12 @@
             this.факультетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.деканатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.специальностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросНаГруппуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.запросНаСпециальностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.запросНаФакультетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.data_grid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +83,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.таблицыToolStripMenuItem,
+            this.запросыToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -182,6 +187,30 @@
             this.специальностиToolStripMenuItem.Text = "Специальности";
             this.специальностиToolStripMenuItem.Click += new System.EventHandler(this.специальностиToolStripMenuItem_Click);
             // 
+            // запросыToolStripMenuItem
+            // 
+            this.запросыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.запросНаГруппуToolStripMenuItem,
+            this.запросНаСпециальностьToolStripMenuItem,
+            this.запросНаФакультетToolStripMenuItem});
+            this.запросыToolStripMenuItem.Name = "запросыToolStripMenuItem";
+            this.запросыToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.запросыToolStripMenuItem.Text = "Запросы";
+            // 
+            // запросНаГруппуToolStripMenuItem
+            // 
+            this.запросНаГруппуToolStripMenuItem.Name = "запросНаГруппуToolStripMenuItem";
+            this.запросНаГруппуToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.запросНаГруппуToolStripMenuItem.Text = "Запрос на группу";
+            this.запросНаГруппуToolStripMenuItem.Click += new System.EventHandler(this.запросНаГруппуToolStripMenuItem_Click);
+            // 
+            // запросНаСпециальностьToolStripMenuItem
+            // 
+            this.запросНаСпециальностьToolStripMenuItem.Name = "запросНаСпециальностьToolStripMenuItem";
+            this.запросНаСпециальностьToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.запросНаСпециальностьToolStripMenuItem.Text = "Запрос на специальность";
+            this.запросНаСпециальностьToolStripMenuItem.Click += new System.EventHandler(this.запросНаСпециальностьToolStripMenuItem_Click);
+            // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
@@ -197,6 +226,13 @@
             this.button1.Text = "удалить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // запросНаФакультетToolStripMenuItem
+            // 
+            this.запросНаФакультетToolStripMenuItem.Name = "запросНаФакультетToolStripMenuItem";
+            this.запросНаФакультетToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.запросНаФакультетToolStripMenuItem.Text = "Запрос на факультет";
+            this.запросНаФакультетToolStripMenuItem.Click += new System.EventHandler(this.запросНаФакультетToolStripMenuItem_Click);
             // 
             // main_form
             // 
@@ -240,6 +276,10 @@
         private System.Windows.Forms.ToolStripMenuItem деканатыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem специальностиToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem запросыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запросНаГруппуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запросНаСпециальностьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem запросНаФакультетToolStripMenuItem;
     }
 }
 

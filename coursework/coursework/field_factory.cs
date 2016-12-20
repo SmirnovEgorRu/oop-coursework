@@ -150,4 +150,20 @@ namespace coursework {
             return new table_record(fields);
         }
     }
+
+    class custom_factory : field_factory {
+        public table_record create_fields(string[] arg) {
+
+            List<table_field> fields = new List<table_field>();
+
+            int n = arg.Count<string>();
+
+            for (int i = 0; i < n; ++i) {
+                fields.Add(new str_table_field(""));
+                fields[i].set_value(arg[i]);
+            }
+
+            return new table_record(fields);
+        }
+    }
 }

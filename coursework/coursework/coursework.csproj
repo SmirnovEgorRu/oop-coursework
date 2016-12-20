@@ -46,8 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="specialty_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="specialty_form.Designer.cs">
+      <DependentUpon>specialty_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="field_factory.cs" />
     <Compile Include="file_contr.cs" />
+    <Compile Include="faculty_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faculty_form.Designer.cs">
+      <DependentUpon>faculty_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="group_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="group_form.Designer.cs">
+      <DependentUpon>group_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="main_contr.cs" />
     <Compile Include="main_form.cs">
       <SubType>Form</SubType>
@@ -58,9 +76,20 @@
     <Compile Include="parser_to_table.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="request.cs" />
+    <Compile Include="request_contr.cs" />
     <Compile Include="table_record.cs" />
     <Compile Include="table_field.cs" />
     <Compile Include="table.cs" />
+    <EmbeddedResource Include="specialty_form.resx">
+      <DependentUpon>specialty_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="faculty_form.resx">
+      <DependentUpon>faculty_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="group_form.resx">
+      <DependentUpon>group_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>
     </EmbeddedResource>

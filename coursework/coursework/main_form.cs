@@ -9,15 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace coursework {
-    public partial class main_form : Form {
+    partial class main_form : Form {
         main_contr main_mngr;
         parser_to_table parser;
+        request_contr request_mngr;
         table current_table;
 
         public main_form() {
             InitializeComponent();
             main_mngr = new main_contr();
             parser = new parser_to_table();
+            request_mngr = new request_contr();
         }
 
         private void display(table table_for_display) {
@@ -40,7 +42,6 @@ namespace coursework {
                 data_grid.Columns.Add(column);
                 ++index;
             }
-
 
             int index_raw = 0;
             table_for_display.Reset();
@@ -127,6 +128,47 @@ namespace coursework {
                 data_grid.Rows.RemoveAt(raw.Index);
         }
 
+        private void запросНаГруппуToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.Enabled = false;
+            var form = new group_form(callback_group);
+            form.Show();
+        }
+
+        private void запросНаСпециальностьToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.Enabled = false;
+            var form = new specialty_form(callback_specialty);
+            form.Show();
+        }
+
+        private void запросНаФакультетToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.Enabled = false;
+            var form = new faculty_form(callback_faculty);
+            form.Show();
+        }
+
+        private void callback_group(string group) {
+            this.Enabled = true;
+            if (group != "%error%") {
+                table result = request_mngr.find(group, "Группа");
+                display(result);
+            }
+        }
+
+        private void callback_faculty(string faculty) {
+            this.Enabled = true;
+            if (faculty != "%error%") {
+                table result = request_mngr.find(faculty, "Факультет");
+                display(result);
+            }
+        }
+
+        private void callback_specialty(string specialty) {
+            this.Enabled = true;
+            if (specialty != "%error%") {
+                table result = request_mngr.find(specialty, "Специальность");
+                display(result);
+            }
+        }
 
     }
 }

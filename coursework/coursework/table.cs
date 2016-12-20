@@ -268,4 +268,17 @@ namespace coursework {
         }
     }
 
+    class table_custom : table {
+
+        public table_custom(string name, List<string> columns) {
+            factory = new custom_factory();
+            name_table = name;
+
+            for(int i=0, n = columns.Count; i < n; ++i)
+                columns_name.Add(columns[i]);
+        }
+    }
+
 }
+
+
