@@ -48,13 +48,13 @@
             this.запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.запросНаОтличниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.студентыПоГруппамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.студентыПоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.label_for_student = new System.Windows.Forms.Label();
             this.rating_view = new System.Windows.Forms.Button();
-            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.студентыПоГруппамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.студентыПоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.data_grid)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,21 +70,21 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1071, 43);
+            this.button2.Location = new System.Drawing.Point(1071, 37);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 23);
+            this.button2.Size = new System.Drawing.Size(92, 52);
             this.button2.TabIndex = 2;
-            this.button2.Text = "сохранить";
+            this.button2.Text = "сохранить изменения";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1071, 72);
+            this.button3.Location = new System.Drawing.Point(1071, 95);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 23);
+            this.button3.Size = new System.Drawing.Size(92, 52);
             this.button3.TabIndex = 3;
-            this.button3.Text = "очистить";
+            this.button3.Text = "очистить таблицу";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -269,42 +269,6 @@
             this.запросНаОтличниковToolStripMenuItem.Text = "Запрос на студентов с одними пятерками";
             this.запросНаОтличниковToolStripMenuItem.Click += new System.EventHandler(this.запросНаОтличниковToolStripMenuItem_Click);
             // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1071, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "удалить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label_for_student
-            // 
-            this.label_for_student.AutoSize = true;
-            this.label_for_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_for_student.Location = new System.Drawing.Point(26, 28);
-            this.label_for_student.Name = "label_for_student";
-            this.label_for_student.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_for_student.Size = new System.Drawing.Size(0, 20);
-            this.label_for_student.TabIndex = 6;
-            // 
-            // rating_view
-            // 
-            this.rating_view.Location = new System.Drawing.Point(1069, 160);
-            this.rating_view.Name = "rating_view";
-            this.rating_view.Size = new System.Drawing.Size(94, 23);
-            this.rating_view.TabIndex = 7;
-            this.rating_view.Text = "успеваемость";
-            this.rating_view.UseVisualStyleBackColor = true;
-            this.rating_view.Click += new System.EventHandler(this.button4_Click);
-            // 
             // отчетыToolStripMenuItem
             // 
             this.отчетыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -327,6 +291,43 @@
             this.студентыПоToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.студентыПоToolStripMenuItem.Text = "Студенты с успеваемостью";
             this.студентыПоToolStripMenuItem.Click += new System.EventHandler(this.студентыПоToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1071, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 52);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "удалить строки";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label_for_student
+            // 
+            this.label_for_student.AutoSize = true;
+            this.label_for_student.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_for_student.Location = new System.Drawing.Point(26, 28);
+            this.label_for_student.Name = "label_for_student";
+            this.label_for_student.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_for_student.Size = new System.Drawing.Size(0, 20);
+            this.label_for_student.TabIndex = 6;
+            // 
+            // rating_view
+            // 
+            this.rating_view.Location = new System.Drawing.Point(1071, 297);
+            this.rating_view.Name = "rating_view";
+            this.rating_view.Size = new System.Drawing.Size(94, 52);
+            this.rating_view.TabIndex = 7;
+            this.rating_view.Text = "успеваемость студента";
+            this.rating_view.UseVisualStyleBackColor = true;
+            this.rating_view.Click += new System.EventHandler(this.button4_Click);
             // 
             // main_form
             // 

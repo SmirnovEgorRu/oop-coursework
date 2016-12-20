@@ -13,6 +13,7 @@ namespace coursework {
         main_contr main_mngr;
         parser_to_table parser;
         request_contr request_mngr;
+        report_contr report_mngr;
         table current_table;
 
         public main_form() {
@@ -20,6 +21,7 @@ namespace coursework {
             main_mngr = new main_contr();
             parser = new parser_to_table();
             request_mngr = new request_contr();
+            report_mngr = new report_contr();
         }
 
         private void display(table table_for_display) {
@@ -222,11 +224,17 @@ namespace coursework {
         }
 
         private void студентыПоToolStripMenuItem_Click(object sender, EventArgs e) {
-
+            table result = report_mngr.report_by_rating();
+            display(result);
         }
 
         private void студентыПоГруппамToolStripMenuItem_Click(object sender, EventArgs e) {
+            table result = report_mngr.report_by_group();
+            display(result);
+        }
 
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e) {
+            MessageBox.Show("Курсовая работа по дисциплине ООП\nстудент: Смирнов Егор\nгруппа: 14-СБК", "О программе");
         }
     }
 }

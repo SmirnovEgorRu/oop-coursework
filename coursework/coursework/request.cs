@@ -236,4 +236,98 @@ namespace coursework {
             return false;
         }
     }
+
+
+    abstract class report: request {
+        protected table result;
+        public abstract table execute(object arg);
+    }
+
+    class group_report: report {
+
+        public override table execute(object arg) {
+            var columns = new List<string>();
+            columns.Add("Группа");
+            columns.Add("Фамилия");
+            columns.Add("Имя");
+            columns.Add("Отчество");
+
+            result = new table_custom("Отчет по группам", columns);
+
+            find();
+
+            return result;
+        }
+
+        private void find() {
+
+            foreach (table_record record in table_group.instanse()) {
+                bool flag = true;
+                foreach (table_record student_record in table_student.instanse()) {
+                    if (record[0].get_absolute_value() == student_record[4].get_absolute_value()) {
+                        string[] arg = new string[4];
+                        if (flag) arg[0] = record[1].get_absolute_value();
+                        else arg[0] = "";
+
+                        for (int i = 1; i <= 3; ++i)
+                            arg[i] = student_record[i].get_absolute_value();
+
+                        result.add_record(arg);
+                        flag = false;
+                    }
+                }
+            }
+        }
+    }
+
+    class rating_report : report {
+
+        public override table execute(object arg) {
+            var columns = new List<string>();
+            columns.Add("Фамилия");
+            columns.Add("Имя");
+            columns.Add("Отчество");
+            columns.Add("Группа");
+            columns.Add("Название предмета");
+            columns.Add("Оценка");
+
+            result = new table_custom("Отчет по студентам", columns);
+
+            find();
+
+            return result;
+        }
+
+        private void find() {
+
+            foreach (table_record record in table_student.instanse()) {
+                bool flag = true;
+                foreach (table_record rating_record in table_academic_progress.instanse()) {
+                    if (record[0].get_absolute_value() == rating_record[0].get_absolute_value()) {
+                        string[] arg = new string[6];
+                        if (flag) {
+                            arg[0] = record[1].get_value();
+                            arg[1] = record[2].get_value();
+                            arg[2] = record[3].get_value();
+                            arg[3] = record[4].get_value();
+                        } 
+                        else {
+                            arg[0] = "";
+                            arg[1] = "";
+                            arg[2] = "";
+                            arg[3] = "";
+                        }
+
+                        arg[4] = rating_record[1].get_value();
+                        arg[5] = rating_record[3].get_value();
+
+                        result.add_record(arg);
+                        flag = false;
+                    }
+                }
+            }
+        }
+    }
+
+
 }
