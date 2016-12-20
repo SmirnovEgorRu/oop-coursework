@@ -62,7 +62,7 @@
             // data_grid
             // 
             this.data_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_grid.Location = new System.Drawing.Point(26, 72);
+            this.data_grid.Location = new System.Drawing.Point(30, 58);
             this.data_grid.Name = "data_grid";
             this.data_grid.Size = new System.Drawing.Size(1017, 422);
             this.data_grid.TabIndex = 0;
@@ -342,8 +342,11 @@
             this.Controls.Add(this.data_grid);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1191, 557);
+            this.MinimumSize = new System.Drawing.Size(1191, 557);
             this.Name = "main_form";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Колледж";
             this.Load += new System.EventHandler(this.main_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_grid)).EndInit();
             this.menuStrip1.ResumeLayout(false);

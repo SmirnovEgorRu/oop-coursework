@@ -11,17 +11,19 @@ using System.Windows.Forms;
 namespace coursework {
     partial class main_form : Form {
         main_contr main_mngr;
-        parser_to_table parser;
-        request_contr request_mngr;
-        report_contr report_mngr;
+        //parser_to_table parser;
+        //request_contr request_mngr;
+        //report_contr report_mngr;
         table current_table;
+        bool password_is_correct;
+
 
         public main_form() {
             InitializeComponent();
             main_mngr = new main_contr();
-            parser = new parser_to_table();
-            request_mngr = new request_contr();
-            report_mngr = new report_contr();
+
+            var password = new password_form(give_access);
+            password.Show();
         }
 
         private void display(table table_for_display) {
@@ -74,7 +76,23 @@ namespace coursework {
         private void main_form_Load(object sender, EventArgs e) {
             data_grid.ColumnHeaderMouseClick += data_grid_ColumnHeaderMouseClick;
             rating_view.Enabled = false;
+
+            password_is_correct = false;
+
+            this.Enabled = false;
+            this.Visible = false;
+
         }
+
+        private bool give_access() {
+            password_is_correct = true;
+            this.Enabled = true;
+            this.Visible = true;
+            return password_is_correct;
+
+        }
+
+
 
         private void data_grid_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
             DataGridViewColumn newColumn = data_grid.Columns[e.ColumnIndex];
@@ -99,7 +117,7 @@ namespace coursework {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            parser.parse(data_grid, current_table);
+            main_mngr.parser.parse(data_grid, current_table);
         }
 
         private void button3_Click(object sender, EventArgs e) {
@@ -158,7 +176,7 @@ namespace coursework {
         private void callback_group(string group) {
             this.Enabled = true;
             if (group != "%error%") {
-                table result = request_mngr.find_by_group(group);
+                table result = main_mngr.request_mngr.find_by_group(group);
                 display(result);
             }
         }
@@ -166,7 +184,7 @@ namespace coursework {
         private void callback_faculty(string faculty) {
             this.Enabled = true;
             if (faculty != "%error%") {
-                table result = request_mngr.find_by_faculty(faculty);
+                table result = main_mngr.request_mngr.find_by_faculty(faculty);
                 display(result);
             }
         }
@@ -174,33 +192,33 @@ namespace coursework {
         private void callback_specialty(string specialty) {
             this.Enabled = true;
             if (specialty != "%error%") {
-                table result = request_mngr.find_by_specialty(specialty);
+                table result = main_mngr.request_mngr.find_by_specialty(specialty);
                 display(result);
             }
         }
 
         private void запросНаНесдавшихToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = request_mngr.find_by_rating_2();
+            table result = main_mngr.request_mngr.find_by_rating_2();
             display(result);
         }
 
         private void запросНаСтудентовСТройкамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = request_mngr.find_by_rating_3();
+            table result = main_mngr.request_mngr.find_by_rating_3();
             display(result);
         }
 
         private void запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = request_mngr.find_by_rating_4();
+            table result = main_mngr.request_mngr.find_by_rating_4();
             display(result);
         }
 
         private void запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = request_mngr.find_by_rating_4_and_5();
+            table result = main_mngr.request_mngr.find_by_rating_4_and_5();
             display(result);
         }
 
         private void запросНаОтличниковToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = request_mngr.find_by_rating_5();
+            table result = main_mngr.request_mngr.find_by_rating_5();
             display(result);
         }
 
@@ -217,19 +235,19 @@ namespace coursework {
                     label_for_student.Text += Convert.ToString(data_grid[4, index].Value);
 
                     string str = Convert.ToString(data_grid[0, index].Value);
-                    table result = request_mngr.find_by_rating(str);
+                    table result = main_mngr.request_mngr.find_by_rating(str);
                     display(result);
                 }
             }
         }
 
         private void студентыПоToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = report_mngr.report_by_rating();
+            table result = main_mngr.report_mngr.report_by_rating();
             display(result);
         }
 
         private void студентыПоГруппамToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = report_mngr.report_by_group();
+            table result = main_mngr.report_mngr.report_by_group();
             display(result);
         }
 

@@ -46,8 +46,8 @@ namespace coursework {
         override public string get_value() {
             related_table.Reset();
             foreach (table_record record in related_table) {
-                int x = Convert.ToInt32(record[0].get_absolute_value());
-                if (Convert.ToInt32(value) == x) {   //TODO
+                int key = Convert.ToInt32(record[0].get_absolute_value());
+                if (Convert.ToInt32(value) == key) {
                     primary_record = record;
                     break;
                 }

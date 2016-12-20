@@ -67,6 +67,7 @@
             this.Controls.Add(this.button);
             this.Controls.Add(this.label1);
             this.Name = "group_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Запрос на группу";
             this.Load += new System.EventHandler(this.group_form_Load);
             this.ResumeLayout(false);

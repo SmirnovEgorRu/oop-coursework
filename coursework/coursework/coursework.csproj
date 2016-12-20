@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="password_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="password_form.Designer.cs">
+      <DependentUpon>password_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="report_contr.cs" />
     <Compile Include="specialty_form.cs">
       <SubType>Form</SubType>
@@ -82,6 +88,9 @@
     <Compile Include="table_record.cs" />
     <Compile Include="table_field.cs" />
     <Compile Include="table.cs" />
+    <EmbeddedResource Include="password_form.resx">
+      <DependentUpon>password_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="specialty_form.resx">
       <DependentUpon>specialty_form.cs</DependentUpon>
     </EmbeddedResource>

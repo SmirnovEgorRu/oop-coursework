@@ -1,5 +1,5 @@
 ﻿namespace coursework {
-    partial class faculty_form {
+    partial class password_form {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,60 +24,62 @@
         /// </summary>
         private void InitializeComponent() {
             this.label1 = new System.Windows.Forms.Label();
+            this.text_box = new System.Windows.Forms.TextBox();
             this.button = new System.Windows.Forms.Button();
-            this.combo_box = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(109, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Введите факултет:";
+            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Введите пароль:";
+            // 
+            // text_box
+            // 
+            this.text_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.text_box.Location = new System.Drawing.Point(113, 115);
+            this.text_box.Name = "text_box";
+            this.text_box.Size = new System.Drawing.Size(135, 26);
+            this.text_box.TabIndex = 1;
             // 
             // button
             // 
             this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button.Location = new System.Drawing.Point(465, 91);
+            this.button.Location = new System.Drawing.Point(113, 161);
             this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(86, 48);
-            this.button.TabIndex = 3;
-            this.button.Text = "Поиск";
+            this.button.Size = new System.Drawing.Size(135, 31);
+            this.button.TabIndex = 2;
+            this.button.Text = "Log In";
             this.button.UseVisualStyleBackColor = true;
             this.button.Click += new System.EventHandler(this.button_Click);
             // 
-            // combo_box
-            // 
-            this.combo_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.combo_box.FormattingEnabled = true;
-            this.combo_box.Location = new System.Drawing.Point(12, 32);
-            this.combo_box.Name = "combo_box";
-            this.combo_box.Size = new System.Drawing.Size(539, 28);
-            this.combo_box.TabIndex = 4;
-            // 
-            // faculty_form
+            // password_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 151);
-            this.Controls.Add(this.combo_box);
+            this.ClientSize = new System.Drawing.Size(368, 289);
             this.Controls.Add(this.button);
+            this.Controls.Add(this.text_box);
             this.Controls.Add(this.label1);
-            this.Name = "faculty_form";
+            this.MaximumSize = new System.Drawing.Size(384, 327);
+            this.MinimumSize = new System.Drawing.Size(384, 327);
+            this.Name = "password_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Запрос на факультет";
-            this.Load += new System.EventHandler(this.group_form_Load);
+            this.Text = "password_form";
+            this.Load += new System.EventHandler(this.password_form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox text_box;
         private System.Windows.Forms.Button button;
-        private System.Windows.Forms.ComboBox combo_box;
     }
 }

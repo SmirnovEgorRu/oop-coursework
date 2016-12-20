@@ -67,6 +67,7 @@
             this.Controls.Add(this.button);
             this.Controls.Add(this.label1);
             this.Name = "specialty_form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Запрос на специальность";
             this.Load += new System.EventHandler(this.specialty_form_Load);
             this.ResumeLayout(false);
