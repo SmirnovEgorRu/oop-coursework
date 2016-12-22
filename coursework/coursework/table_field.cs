@@ -28,16 +28,6 @@ namespace coursework {
         public int_table_field(string new_name) { type = "int"; name = new_name; }
     }
 
-    class primary_key_table_field : table_field {
-        private table related_table;
-        private int index;
-
-        public primary_key_table_field(table new_table, int new_index) {
-            related_table = new_table;
-            index = new_index;
-        }
-    }
-
     class key_table_field : table_field {
         private table related_table;
         private table_record primary_record;

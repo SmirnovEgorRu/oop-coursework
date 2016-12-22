@@ -91,7 +91,6 @@ namespace coursework {
     class table_student: table {
         static table_student _instance;
 
-
         static public table_student instanse() {
             if (_instance == null)
                 _instance = new table_student();
