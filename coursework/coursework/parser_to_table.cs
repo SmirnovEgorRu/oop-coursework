@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace coursework {
-    class parser_to_table {
+    public class parser_to_table {
 
         public void parse(DataGridView data_grid, table source_table) {
             string table_name = source_table.get_name();

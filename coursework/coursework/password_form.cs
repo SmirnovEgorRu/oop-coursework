@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace coursework {
-    public partial class password_form : Form {
+    partial class password_form : Form {
         Func<bool> access;
+        bool exit_flag;
 
         public password_form(Func<bool> new_access) {
             InitializeComponent();
             access = new_access;
             TopMost = true;
+            exit_flag = false;
 
         }
         private void close(object sender, EventArgs e) {
@@ -23,7 +25,7 @@ namespace coursework {
             string password = settings.Пароль;
             string input = text_box.Text;
 
-            if (password != input) {
+            if (password != input && exit_flag != true) {
                 var pass = new password_form(access);
                 pass.Show();
             }
@@ -45,6 +47,11 @@ namespace coursework {
 
         private void password_form_Load(object sender, EventArgs e) {
             this.FormClosed += close;
+        }
+
+        private void exit_Click(object sender, EventArgs e) {
+            exit_flag = true;
+            Application.Exit();
         }
     }
 }

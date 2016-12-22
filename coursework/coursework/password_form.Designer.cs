@@ -26,6 +26,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.text_box = new System.Windows.Forms.TextBox();
             this.button = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,11 +58,22 @@
             this.button.UseVisualStyleBackColor = true;
             this.button.Click += new System.EventHandler(this.button_Click);
             // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(281, 254);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(75, 23);
+            this.exit.TabIndex = 3;
+            this.exit.Text = "Закрыть";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // password_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 289);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.button);
             this.Controls.Add(this.text_box);
             this.Controls.Add(this.label1);
@@ -81,5 +93,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox text_box;
         private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button exit;
     }
 }

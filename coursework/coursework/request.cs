@@ -10,7 +10,7 @@ namespace coursework {
     }
 
     // ---------------------------
-    abstract class request_by_value: request {
+    abstract public class request_by_value: request {
         protected table result;
 
         public abstract table execute(object arg);
@@ -28,7 +28,7 @@ namespace coursework {
         }
     }
 
-    class group_request: request_by_value {
+    public class group_request: request_by_value {
 
         public override table execute(object value) {
             List<string> columns = table_student.instanse().get_columns();
@@ -44,7 +44,7 @@ namespace coursework {
         }
     }
 
-    class faculty_request : request_by_value {
+    public class faculty_request : request_by_value {
         public override table execute(object value) {
 
             // the first step
@@ -74,7 +74,7 @@ namespace coursework {
         }
     }
 
-    class specialty_request : request_by_value {
+    public class specialty_request : request_by_value {
         public override table execute(object value) {
 
             // the first step
@@ -104,7 +104,7 @@ namespace coursework {
         }
     }
 
-    class rating_request : request_by_value {
+    public class rating_request : request_by_value {
         public override table execute(object value) {
             List<string> columns = table_academic_progress.instanse().get_columns();
             result = new table_custom("Запрос успеваемости", columns);
@@ -116,7 +116,7 @@ namespace coursework {
     }
 
     // ---------------------------
-    abstract class request_by_rating : request {
+    abstract public class request_by_rating : request {
         protected table result;
 
         public abstract table execute(object arg);
@@ -151,7 +151,7 @@ namespace coursework {
         }
     }
 
-    class _2_request : request_by_rating {
+    public class _2_request : request_by_rating {
         public override table execute(object value = null) {
             List<string> columns = table_student.instanse().get_columns();
             result = new table_custom("Не сдавшие", columns);
@@ -167,7 +167,7 @@ namespace coursework {
         }
     }
 
-    class _3_request : request_by_rating {
+    public class _3_request : request_by_rating {
 
         public override table execute(object value = null) {
             List<string> columns = table_student.instanse().get_columns();
@@ -186,7 +186,7 @@ namespace coursework {
         }
     }
 
-    class _4_request : request_by_rating {
+    public class _4_request : request_by_rating {
         public override table execute(object value = null) {
             List<string> columns = table_student.instanse().get_columns();
             result = new table_custom("Сдавшие на одни четверки", columns);
@@ -203,7 +203,7 @@ namespace coursework {
         }
     }
 
-    class _4_and_5_request : request_by_rating {
+    public class _4_and_5_request : request_by_rating {
         public override table execute(object value = null) {
             List<string> columns = table_student.instanse().get_columns();
             result = new table_custom("Сдавшие на четверки и пятерки", columns);
@@ -220,7 +220,7 @@ namespace coursework {
         }
     }
 
-    class _5_request : request_by_rating {
+    public class _5_request : request_by_rating {
         public override table execute(object value = null) {
             List<string> columns = table_student.instanse().get_columns();
             result = new table_custom("Сдавшие на одни пятерки", columns);
@@ -238,12 +238,12 @@ namespace coursework {
     }
 
 
-    abstract class report: request {
+    abstract public class report: request {
         protected table result;
         public abstract table execute(object arg);
     }
 
-    class group_report: report {
+    public class group_report: report {
 
         public override table execute(object arg) {
             var columns = new List<string>();
@@ -280,7 +280,7 @@ namespace coursework {
         }
     }
 
-    class rating_report : report {
+    public class rating_report : report {
 
         public override table execute(object arg) {
             var columns = new List<string>();
@@ -328,6 +328,5 @@ namespace coursework {
             }
         }
     }
-
 
 }

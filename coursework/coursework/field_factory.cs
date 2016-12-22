@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace coursework {
-    interface field_factory {
+    public interface field_factory {
         table_record create_fields(string[] arg);
     }
 
-    class student_factory: field_factory {
+    public class student_factory: field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
@@ -31,7 +31,7 @@ namespace coursework {
         }
     }
 
-    class subject_factory : field_factory {
+    public class subject_factory : field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
@@ -48,20 +48,15 @@ namespace coursework {
     }
 
 
-    class academic_progress_factory : field_factory {
+    public class academic_progress_factory : field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
-            //fields.Add(new key_table_field("Код студента", table_student.instanse(), 1));
             fields.Add(new str_table_field("Код студента"));
             fields.Add(new key_table_field("Код предмета", table_subject.instanse(), 1));
-            //fields.Add(new str_table_field("Код предмета"));
-
             fields.Add(new str_table_field("Форма контроля"));
             fields.Add(new str_table_field("Оценка"));
             fields.Add(new date_table_field("Дата"));
-
-            //fields.Add(new key_table_field("Код преподавателя", table_teacher.instanse(), 1));
             fields.Add(new str_table_field("Код преподавателя"));
 
             for (int i = 0, n = arg.Count<string>(); i < n; ++i)
@@ -71,7 +66,7 @@ namespace coursework {
         }
     }
 
-    class teacher_factory : field_factory {
+    public class teacher_factory : field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
@@ -91,7 +86,7 @@ namespace coursework {
         }
     }
 
-    class group_factory : field_factory {
+    public class group_factory : field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
@@ -108,7 +103,7 @@ namespace coursework {
         }
     }
 
-    class deanery_factory : field_factory {
+    public class deanery_factory : field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
@@ -125,7 +120,7 @@ namespace coursework {
         }
     }
 
-    class specialty_factory : field_factory {
+    public class specialty_factory : field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
@@ -141,7 +136,7 @@ namespace coursework {
         }
     }
 
-    class faculty_factory : field_factory {
+    public class faculty_factory : field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();
@@ -156,7 +151,7 @@ namespace coursework {
         }
     }
 
-    class custom_factory : field_factory {
+    public class custom_factory : field_factory {
         public table_record create_fields(string[] arg) {
 
             List<table_field> fields = new List<table_field>();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace coursework {
 
-    class request_contr {
+    public class request_contr {
         request cur_request;
 
         public table find_by_group(string value) {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Collections;
 
 namespace coursework {
-    abstract class table: IEnumerable, IEnumerator {
+    abstract public class table: IEnumerable, IEnumerator {
         protected List<table_record> records;
         protected field_factory factory;
         protected string name_table;
@@ -88,7 +88,7 @@ namespace coursework {
 
     }
 
-    class table_student: table {
+    public class table_student: table {
         static table_student _instance;
 
         static public table_student instanse() {
@@ -115,7 +115,7 @@ namespace coursework {
         }
     }
 
-    class table_subject : table {
+    public class table_subject : table {
         static table_subject _instance;
 
         static public table_subject instanse() {
@@ -136,7 +136,7 @@ namespace coursework {
         }
     }
 
-    class table_academic_progress: table {
+    public class table_academic_progress: table {
         static table_academic_progress _instance;
 
         static public table_academic_progress instanse() {
@@ -159,7 +159,7 @@ namespace coursework {
         }
     }
 
-    class table_teacher : table {
+    public class table_teacher : table {
         static table_teacher _instance;
 
         static public table_teacher instanse() {
@@ -184,7 +184,7 @@ namespace coursework {
         }
     }
 
-    class table_group : table {
+    public class table_group : table {
         static table_group _instance;
 
         static public table_group instanse() {
@@ -206,7 +206,7 @@ namespace coursework {
         }
     }
 
-    class table_deanery : table {
+    public class table_deanery : table {
         static table_deanery _instance;
 
         static public table_deanery instanse() {
@@ -228,7 +228,7 @@ namespace coursework {
         }
     }
    
-    class table_specialty : table {
+    public class table_specialty : table {
         static table_specialty _instance;
 
         static public table_specialty instanse() {
@@ -248,7 +248,7 @@ namespace coursework {
         }
     }
 
-    class table_faculty : table {
+    public class table_faculty : table {
         static table_faculty _instance;
 
         static public table_faculty instanse() {
@@ -267,7 +267,7 @@ namespace coursework {
         }
     }
 
-    class table_custom : table {
+    public class table_custom : table {
 
         public table_custom(string name, List<string> columns) {
             factory = new custom_factory();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace coursework {
 
-    abstract class table_field {
+    abstract public class table_field {
         public string name { get; protected set; }
         public string type { get; protected set; }
         protected string value;
@@ -16,19 +16,19 @@ namespace coursework {
         virtual public void set_value(string new_value) { value = new_value; }
     }
 
-    class str_table_field: table_field {
+    public class str_table_field: table_field {
         public str_table_field(string new_name) { type = "str"; name = new_name; }
     }
 
-    class date_table_field : table_field {
+    public class date_table_field : table_field {
         public date_table_field(string new_name) { type = "date"; name = new_name; }
     }
 
-    class int_table_field : table_field {
+    public class int_table_field : table_field {
         public int_table_field(string new_name) { type = "int"; name = new_name; }
     }
 
-    class key_table_field : table_field {
+    public class key_table_field : table_field {
         private table related_table;
         private table_record primary_record;
         private int index;
@@ -36,8 +36,8 @@ namespace coursework {
         override public string get_value() {
             related_table.Reset();
             foreach (table_record record in related_table) {
-                int key = Convert.ToInt32(record[0].get_absolute_value());
-                if (Convert.ToInt32(value) == key) {
+                string key = record[0].get_absolute_value();
+                if (value == key) {
                     primary_record = record;
                     break;
                 }

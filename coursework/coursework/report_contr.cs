@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace coursework {
-    class report_contr {
+    public class report_contr {
         request cur_request;
 
         public table report_by_group() {

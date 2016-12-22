@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Collections;
 
 namespace coursework {
-    class table_record: IEnumerable, IEnumerator {
+    public class table_record: IEnumerable, IEnumerator {
         private List<table_field> fields;
         private int index;
 

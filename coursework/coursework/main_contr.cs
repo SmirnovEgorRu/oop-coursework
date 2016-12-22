@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace coursework {
-    class main_contr {
+    public class main_contr {
         file_contr file_mngr;
         public parser_to_table parser;
         public request_contr request_mngr;

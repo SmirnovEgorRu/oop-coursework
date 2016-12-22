@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace coursework {
-    static class Program {
+    static public class Program {
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

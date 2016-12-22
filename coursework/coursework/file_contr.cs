@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 namespace coursework {
-    class file_contr {
+    public class file_contr {
         public void add_from_file() {
             read("files/предметы.csv", table_subject.instanse());
             read("files/парс-препод.csv", table_teacher.instanse());
