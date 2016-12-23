@@ -176,7 +176,7 @@ namespace coursework {
         private void callback_group(string group) {
             this.Enabled = true;
             if (group != "%error%") {
-                table result = main_mngr.request_mngr.find_by_group(group);
+                table result = main_mngr.request_mngr.find_by_value(group, request_contr.by_value.group);
                 display(result);
             }
         }
@@ -184,7 +184,7 @@ namespace coursework {
         private void callback_faculty(string faculty) {
             this.Enabled = true;
             if (faculty != "%error%") {
-                table result = main_mngr.request_mngr.find_by_faculty(faculty);
+                table result = main_mngr.request_mngr.find_by_value(faculty, request_contr.by_value.faculty);
                 display(result);
             }
         }
@@ -192,33 +192,33 @@ namespace coursework {
         private void callback_specialty(string specialty) {
             this.Enabled = true;
             if (specialty != "%error%") {
-                table result = main_mngr.request_mngr.find_by_specialty(specialty);
+                table result = main_mngr.request_mngr.find_by_value(specialty, request_contr.by_value.specialty);
                 display(result);
             }
         }
 
         private void запросНаНесдавшихToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating_2();
+            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._2);
             display(result);
         }
 
         private void запросНаСтудентовСТройкамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating_3();
+            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._3);
             display(result);
         }
 
         private void запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating_4();
+            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._4);
             display(result);
         }
 
         private void запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating_4_and_5();
+            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._4_and_5);
             display(result);
         }
 
         private void запросНаОтличниковToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating_5();
+            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._5);
             display(result);
         }
 
@@ -235,7 +235,7 @@ namespace coursework {
                     label_for_student.Text += Convert.ToString(data_grid[4, index].Value);
 
                     string str = Convert.ToString(data_grid[0, index].Value);
-                    table result = main_mngr.request_mngr.find_by_rating(str);
+                    table result = main_mngr.request_mngr.find_by_value(str, request_contr.by_value.rating);
                     display(result);
                 }
             }

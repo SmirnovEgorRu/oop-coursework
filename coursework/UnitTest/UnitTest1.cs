@@ -91,7 +91,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_group(name_code);
+            table new_table = contr.find_by_value(name_code, request_contr.by_value.group);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
@@ -124,7 +124,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_faculty(name_faculty);
+            table new_table = contr.find_by_value(name_faculty, request_contr.by_value.faculty);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
@@ -157,7 +157,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_specialty(name_specialty);
+            table new_table = contr.find_by_value(name_specialty, request_contr.by_value.specialty);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
@@ -182,7 +182,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_rating(code_student);
+            table new_table = contr.find_by_value(code_student, request_contr.by_value.rating);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
@@ -208,7 +208,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_rating_2();
+            table new_table = contr.find_by_rating(request_contr.by_rating._2);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
@@ -234,7 +234,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_rating_3();
+            table new_table = contr.find_by_rating(request_contr.by_rating._3);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
@@ -260,7 +260,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_rating_4();
+            table new_table = contr.find_by_rating(request_contr.by_rating._4);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
@@ -286,7 +286,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_rating_5();
+            table new_table = contr.find_by_rating(request_contr.by_rating._5);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
@@ -316,7 +316,7 @@ namespace UnitTest {
 
             var contr = new request_contr();
 
-            table new_table = contr.find_by_rating_4_and_5();
+            table new_table = contr.find_by_rating(request_contr.by_rating._4_and_5);
             int new_size = new_table.size();
 
             Assert.AreEqual(new_size, 1);
