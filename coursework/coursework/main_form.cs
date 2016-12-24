@@ -89,8 +89,6 @@ namespace coursework {
 
         }
 
-
-
         private void data_grid_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
             DataGridViewColumn newColumn = data_grid.Columns[e.ColumnIndex];
             DataGridViewColumn oldColumn = data_grid.SortedColumn;

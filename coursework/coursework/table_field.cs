@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace coursework {
-
     abstract public class table_field {
         public string name { get; protected set; }
         public string type { get; protected set; }

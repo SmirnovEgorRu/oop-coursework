@@ -30,8 +30,8 @@ namespace coursework {
 
         private void write(string file_name, table new_table) {
 
-            FileStream file1 = new FileStream(file_name, FileMode.Create); 
-            StreamWriter writer = new StreamWriter(file1);
+            FileStream file = new FileStream(file_name, FileMode.Create); 
+            StreamWriter writer = new StreamWriter(file);
 
             foreach(table_record record in new_table) {
                 bool flag = false;
