@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="coursework.faculty_form" Collapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAABAACAAABAAAACAgAACAAABAAAIAIAAAQAAAAA=</HashCode>
+      <FileName>faculty_form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.student_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.subject_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.academic_progress_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.teacher_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.group_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.deanery_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.specialty_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.faculty_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.custom_factory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.file_contr">
+    <Position X="27.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>file_contr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.group_form" Collapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAABAACAAABAAAACAgAACAAABAAAIAIAAAQAAAAA=</HashCode>
+      <FileName>group_form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.main_contr">
+    <Position X="23.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAQAAAAgQAAAADAAAAAhAAAIAQ=</HashCode>
+      <FileName>main_contr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.main_form" Collapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AdC2zJCAMGtAAQAgUAaUANACyAE4lAgACHEoCCQIYRA=</HashCode>
+      <FileName>main_form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.parser_to_table">
+    <Position X="29" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAACAgAAAAEAAAAAAAAKAEAQAAAAAAAAAAAABIAA=</HashCode>
+      <FileName>parser_to_table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.password_form" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAQCAAABAAAADAAgACAAABAAAAAIAEACAACAA=</HashCode>
+      <FileName>password_form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.Program" Collapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.report_contr">
+    <Position X="27.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAA=</HashCode>
+      <FileName>report_contr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.request_by_value" Collapsed="true">
+    <Position X="3.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAEAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="coursework.group_request" Collapsed="true">
+    <Position X="2.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.faculty_request" Collapsed="true">
+    <Position X="5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.specialty_request" Collapsed="true">
+    <Position X="7.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.rating_request" Collapsed="true">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.request_by_rating" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgBAAEAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="coursework._2_request" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework._3_request" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework._4_request" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework._4_and_5_request" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework._5_request" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.report" Collapsed="true">
+    <Position X="11.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="coursework.group_report" Collapsed="true">
+    <Position X="10.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.rating_report" Collapsed="true">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.request_contr">
+    <Position X="25.5" Y="9.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="coursework.request_contr.by_rating" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>request_contr.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="coursework.request_contr.by_value" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>request_contr.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAQAAAQAAQAIAIAAEAAADgAQAAAAAAAAQ=</HashCode>
+      <FileName>request_contr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.specialty_form" Collapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAABAACAAABAAABCAAAACAAABAAAIAIAAAQAAAAA=</HashCode>
+      <FileName>specialty_form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAAAACAAAgBBAACISAAAAAAAAAAAAAKAAAAKABAAE=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="coursework.table_student" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_subject" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_academic_progress" Collapsed="true">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_teacher" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_group" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_deanery" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_specialty" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_faculty" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_custom" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_field" Collapsed="true">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAFADAAAQAAAAAAAAA=</HashCode>
+      <FileName>table_field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.str_table_field" Collapsed="true">
+    <Position X="7.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table_field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.date_table_field" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table_field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.int_table_field" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>table_field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.key_table_field" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAgAAAAAABAAAQAAAAABAAA=</HashCode>
+      <FileName>table_field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.table_record" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAAAAAABBAACICAAAAAAAAAAAAAIAAAAAABAAA=</HashCode>
+      <FileName>table_record.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="coursework.Properties.Resources" Collapsed="true">
+    <Position X="21.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="coursework.Properties.Settings" Collapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="coursework.field_factory" Collapsed="true">
+    <Position X="21.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>field_factory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="coursework.request" Collapsed="true">
+    <Position X="23.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>request.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="8.25" />
+</ClassDiagram>
