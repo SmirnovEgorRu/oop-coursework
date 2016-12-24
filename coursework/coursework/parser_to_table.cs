@@ -174,14 +174,22 @@ namespace coursework {
 
             var rating = table_academic_progress.instanse();
 
+            List<table_record> to_delete = new List<table_record>();
+
+
             rating.Reset();
             foreach (table_record record in rating) {
                 string n_index = record[0].get_value();
-                if (index == n_index)
-                    rating.delete_record(record);
+                if (index == n_index) {
+                    to_delete.Add(record);
+                }
             }
-            
-            for (int i = 0, n_raw = data_grid.RowCount - 1; i < n_raw; ++i) {
+
+            foreach (table_record record in to_delete) {
+                rating.delete_record(record);
+            }
+
+                for (int i = 0, n_raw = data_grid.RowCount - 1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
 
