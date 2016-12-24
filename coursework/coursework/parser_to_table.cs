@@ -10,8 +10,7 @@ namespace coursework {
 
         public void parse(DataGridView data_grid, table source_table) {
             string table_name = source_table.get_name();
-            source_table.clear();
-
+            
             switch (table_name) {
                 case "Студент": student(data_grid, source_table); break;
                 case "Преподаватель": teacher(data_grid, source_table); break;
@@ -21,11 +20,14 @@ namespace coursework {
                 case "Деканат": deanery(data_grid, source_table); break;
                 case "Специальность": specialty(data_grid, source_table); break;
                 case "Факультет": faculty(data_grid, source_table); break;
+                case "Запрос успеваемости": request_rating(data_grid, source_table); break;
                 default: break;
             }
         }
 
         void student(DataGridView data_grid, table source_table) {
+            source_table.clear();
+
             for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
@@ -44,6 +46,7 @@ namespace coursework {
         }
 
         void group(DataGridView data_grid, table source_table) {
+            source_table.clear();
             for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
@@ -67,6 +70,7 @@ namespace coursework {
         }
 
         void subject(DataGridView data_grid, table source_table) {
+            source_table.clear();
             for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 string[] arg = new string[data_grid.ColumnCount];
 
@@ -78,6 +82,7 @@ namespace coursework {
         }
 
         void academic_progress(DataGridView data_grid, table source_table) {
+            source_table.clear();
             for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
@@ -106,6 +111,7 @@ namespace coursework {
         }
 
         void teacher(DataGridView data_grid, table source_table) {
+            source_table.clear();
             for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 string[] arg = new string[data_grid.ColumnCount];
 
@@ -117,6 +123,7 @@ namespace coursework {
         }
 
         void deanery(DataGridView data_grid, table source_table) {
+            source_table.clear();
             for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 bool error = false;
                 string[] arg = new string[data_grid.ColumnCount];
@@ -134,6 +141,7 @@ namespace coursework {
         }
 
         void specialty(DataGridView data_grid, table source_table) {
+            source_table.clear();
             for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 string[] arg = new string[data_grid.ColumnCount];
 
@@ -145,6 +153,7 @@ namespace coursework {
         }
 
         void faculty(DataGridView data_grid, table source_table) {
+            source_table.clear();
             for (int i = 0, n_raw = data_grid.RowCount-1; i < n_raw; ++i) {
                 string[] arg = new string[data_grid.ColumnCount];
 
@@ -152,6 +161,39 @@ namespace coursework {
                     arg[j] = Convert.ToString(data_grid[j, i].Value);
 
                 source_table.add_record(arg);
+            }
+        }
+
+        void request_rating(DataGridView data_grid, table source_table) {
+            var student = table_student.instanse();
+
+            int size = source_table.size();
+
+            if (size < 1) return;
+            string index = source_table[0][0].get_absolute_value();
+
+            var rating = table_academic_progress.instanse();
+
+            rating.Reset();
+            foreach (table_record record in rating) {
+                string n_index = record[0].get_value();
+                if (index == n_index)
+                    rating.delete_record(record);
+            }
+            
+            for (int i = 0, n_raw = data_grid.RowCount - 1; i < n_raw; ++i) {
+                bool error = false;
+                string[] arg = new string[data_grid.ColumnCount];
+
+                for (int j = 0, n_columns = data_grid.ColumnCount; j < n_columns; ++j) {
+                    if (j == 1) {
+                        string key = table_subject.instanse().find(Convert.ToString(data_grid[j, i].Value), 1, 0);
+                        if (key != "%undef%") arg[j] = key;
+                        else error = true;
+                    }
+                    else arg[j] = Convert.ToString(data_grid[j, i].Value);
+                }
+                if (!error) rating.add_record(arg);
             }
         }
 

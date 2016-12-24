@@ -11,9 +11,6 @@ using System.Windows.Forms;
 namespace coursework {
     partial class main_form : Form {
         main_contr main_mngr;
-        //parser_to_table parser;
-        //request_contr request_mngr;
-        //report_contr report_mngr;
         table current_table;
         bool password_is_correct;
 
@@ -117,7 +114,7 @@ namespace coursework {
         }
 
         private void button2_Click(object sender, EventArgs e) {
-            main_mngr.parser.parse(data_grid, current_table);
+            main_mngr.parse(data_grid, current_table);
         }
 
         private void button3_Click(object sender, EventArgs e) {
@@ -176,7 +173,7 @@ namespace coursework {
         private void callback_group(string group) {
             this.Enabled = true;
             if (group != "%error%") {
-                table result = main_mngr.request_mngr.find_by_value(group, request_contr.by_value.group);
+                table result = main_mngr.find_by_value(group, request_contr.by_value.group);
                 display(result);
             }
         }
@@ -184,7 +181,7 @@ namespace coursework {
         private void callback_faculty(string faculty) {
             this.Enabled = true;
             if (faculty != "%error%") {
-                table result = main_mngr.request_mngr.find_by_value(faculty, request_contr.by_value.faculty);
+                table result = main_mngr.find_by_value(faculty, request_contr.by_value.faculty);
                 display(result);
             }
         }
@@ -192,33 +189,33 @@ namespace coursework {
         private void callback_specialty(string specialty) {
             this.Enabled = true;
             if (specialty != "%error%") {
-                table result = main_mngr.request_mngr.find_by_value(specialty, request_contr.by_value.specialty);
+                table result = main_mngr.find_by_value(specialty, request_contr.by_value.specialty);
                 display(result);
             }
         }
 
         private void запросНаНесдавшихToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._2);
+            table result = main_mngr.find_by_rating(request_contr.by_rating._2);
             display(result);
         }
 
         private void запросНаСтудентовСТройкамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._3);
+            table result = main_mngr.find_by_rating(request_contr.by_rating._3);
             display(result);
         }
 
         private void запросНаСтудентовСОднимиЧетверкамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._4);
+            table result = main_mngr.find_by_rating(request_contr.by_rating._4);
             display(result);
         }
 
         private void запросНаСтудентовСЧетверкамиИПятеркамиToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._4_and_5);
+            table result = main_mngr.find_by_rating(request_contr.by_rating._4_and_5);
             display(result);
         }
 
         private void запросНаОтличниковToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.request_mngr.find_by_rating(request_contr.by_rating._5);
+            table result = main_mngr.find_by_rating(request_contr.by_rating._5);
             display(result);
         }
 
@@ -235,19 +232,19 @@ namespace coursework {
                     label_for_student.Text += Convert.ToString(data_grid[4, index].Value);
 
                     string str = Convert.ToString(data_grid[0, index].Value);
-                    table result = main_mngr.request_mngr.find_by_value(str, request_contr.by_value.rating);
-                    display(result);
+                    table current_table = main_mngr.find_by_value(str, request_contr.by_value.rating);
+                    display(current_table);
                 }
             }
         }
 
         private void студентыПоToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.report_mngr.report_by_rating();
+            table result = main_mngr.report_by_rating();
             display(result);
         }
 
         private void студентыПоГруппамToolStripMenuItem_Click(object sender, EventArgs e) {
-            table result = main_mngr.report_mngr.report_by_group();
+            table result = main_mngr.report_by_group();
             display(result);
         }
 
